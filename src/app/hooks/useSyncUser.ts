@@ -12,13 +12,18 @@ export function useSyncUser() {
   useEffect(() => {
     if (!isLoaded || !user) return;
 
-    console.log("🔥 SYNCING USER TO CONVEX:", user.id);
+    const email =
+      user.emailAddresses && user.emailAddresses.length > 0
+        ? user.emailAddresses[0].emailAddress
+        : "";
 
     upsertUser({
       clerkId: user.id,
       name: user.fullName ?? "No Name",
-      email: user.emailAddresses[0].emailAddress,
+      email,
       imageUrl: user.imageUrl ?? "",
     });
   }, [isLoaded, user, upsertUser]);
+
+  return upsertUser;
 }

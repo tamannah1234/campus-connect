@@ -1,9 +1,5 @@
-import Providers from "./providers";
 import "./globals.css";
-
-export const metadata = {
-  title: "Campus Connect",
-};
+import Providers from "./providers";
 
 export default function RootLayout({
   children,
@@ -13,7 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
