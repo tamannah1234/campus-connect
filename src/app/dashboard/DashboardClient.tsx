@@ -12,7 +12,7 @@ export default function DashboardClient() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const userParam = searchParams?.get("user");
+    const userParam = searchParams.get("user");
     if (userParam) setSelectedUserId(userParam);
   }, [searchParams]);
 
@@ -27,7 +27,7 @@ export default function DashboardClient() {
         <div className="flex items-center gap-3">
           <Link
             href="/users"
-            className="inline-flex h-9 px-4 rounded-full bg-black text-white text-sm font-medium hover:bg-black/90"
+            className="inline-flex h-9 px-3 rounded-full bg-black text-white text-sm font-medium hover:bg-black/90 items-center justify-center"
           >
             Find Users
           </Link>
