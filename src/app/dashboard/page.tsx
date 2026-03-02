@@ -7,6 +7,7 @@ import UsersSidebar from "../components/UsersSidebar";
 import Chat from "../components/Chat";
 import { useSearchParams, useRouter } from "next/navigation";
 
+export const dynamic = "force-dynamic";
 export default function Dashboard() {
   const [selectedUserId, setSelectedUserId] = useState<string | null>(null);
   const searchParams = useSearchParams();

@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Campus Connect
 
-## Getting Started
+Campus Connect is a full-stack web application designed for seamless campus communication.  
+It enables authenticated users to discover other users, view profiles, and interact in a clean, modern interface.
 
-First, run the development server:
+This project demonstrates **real-world full-stack development** using modern tools and best practices.
 
-```bash
+---
+
+## 🔗 Live Project
+> _(Add deployment link here if hosted)_  
+Example: https://campus-connect.vercel.app
+
+---
+
+## 🚀 Tech Stack
+
+### Frontend
+- **Next.js (App Router)**
+- **React.js**
+- **Tailwind CSS**
+- **TypeScript**
+
+### Backend
+- **Convex** (Real-time backend & database)
+
+### Authentication
+- **Clerk** (Secure sign-up & sign-in)
+
+---
+
+## ✨ Features
+
+- 🔐 Secure authentication using Clerk
+- 👥 User discovery & sidebar listing
+- 🔍 Search users by name
+- 🖼 Profile image support with fallback initials
+- 📱 Responsive UI using Tailwind CSS
+- ⚡ Real-time data fetching with Convex
+- 🎨 Clean and modern UI (no component libraries used)
+
+---
+
+## 📸 Screenshots
+> _(Optional – you can add screenshots here later)_
+
+
+/public/screenshots/
+├── dashboard.png
+├── users-sidebar.png
+
+
+---
+
+## 📁 Project Structure
+
+
+campus-connect/
+├── src/
+│ ├── app/
+│ │ ├── layout.tsx
+│ │ ├── globals.css
+│ │ ├── dashboard/
+│ │ └── sign-up/
+│ ├── components/
+│ │ └── UsersSidebar.tsx
+│ └── providers/
+│ └── Providers.tsx
+├── convex/
+│ ├── users.ts
+│ └── _generated/
+├── public/
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+└── README.md
+
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_CONVEX_URL=your_convex_url
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+🛠 Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/campus-connect.git
+cd campus-connect
+2️⃣ Install Dependencies
+npm install
+3️⃣ Start Convex
+npx convex dev
+4️⃣ Run the Application
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser at:
+👉 http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🎨 Styling Approach
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tailwind CSS used for utility-first styling
 
-## Learn More
+No UI libraries (manual layout & responsiveness)
 
-To learn more about Next.js, take a look at the following resources:
+Consistent spacing, typography, and color system
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧠 What I Learned
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Integrating Convex with Next.js App Router
 
-## Deploy on Vercel
+Managing authentication using Clerk
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Handling real-time data with React hooks
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Debugging Tailwind & PostCSS configuration issues
+
+Building scalable and reusable UI components
+
+🧩 Challenges Solved
+
+Fixed Tailwind CSS not applying due to PostCSS config issues
+
+Managed Convex provider setup in App Router
+
+Implemented avatar fallback logic when images are missing
+
+Ensured responsive and consistent layout across components
+
+👩‍💻 Author
+
+Tamanna Singh
+Java Full Stack Developer
+Skills: Java, Spring Boot, React, Next.js, Tailwind CSS, MySQL
